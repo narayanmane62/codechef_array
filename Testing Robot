@@ -1,0 +1,36 @@
+// use set data structer 
+
+#include <iostream>
+#include<set>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,x;
+	    //int c=0;
+	    cin>>n>>x;
+	    string s;
+	    set<int>ss;
+	    ss.insert(x);
+	    cin>>s;
+	    for(int i=0;i<n;i++ )
+	    {
+	        if(s[i]=='R')
+	        {
+	            x++;
+	        }
+	        if(s[i]=='L')
+	        {
+	            x--;
+	        }
+	        ss.insert(x);
+	      
+	    }
+	      cout<<ss.size()<<endl;
+	}
+	return 0;
+}
